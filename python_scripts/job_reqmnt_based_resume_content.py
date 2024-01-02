@@ -127,22 +127,6 @@ def prompt_awards(job_reqmnt,words=100):
     return prompt
 
 
-# ----------------------------------------------
-
-# from openai import OpenAI
-# client = OpenAI()
-
-# completion = client.chat.completions.create(
-#   model="gpt-3.5-turbo",
-#   messages=[
-#     {"role": "system", "content": "You are an expert in Resume Building, skilled in creation of resume based on job requirements."},
-#     {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
-#   ]
-# )
-
-# print(completion.choices[0].message)
-
-# --------------------------------------------------
 
 if __name__ == '__main__':
 
