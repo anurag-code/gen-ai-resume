@@ -1,0 +1,10 @@
+# .gitignore
+
+# Ignore Python virtual environments
+openai-env/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore environment-specific files
+.env

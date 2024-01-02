@@ -1,0 +1,25 @@
+experience:
+-   employer: ABC Company
+    title: Data Engineer
+    location: New York, NY
+    dates: Jan 2018 - Present
+    description:
+    - Led the development of a data ingestion, transformation, and egress framework
+        resulting in improved data processing efficiency by 30%
+    - Designed and implemented data pipelines using Azure Data Factory and Azure Synapse
+        for seamless data integration
+    - Developed RESTful APIs to facilitate data exchange between different platforms,
+        improving data accessibility and usability
+    - Utilized strong SQL background to optimize queries and troubleshoot performance
+        issues, resulting in 20% reduction in query execution time
+-   employer: XYZ Solutions
+    title: Data Engineering Intern
+    location: San Francisco, CA
+    dates: May 2017 - Aug 2017
+    description:
+    - Assisted in the development of technical designs for data profiling and cataloguing
+        exercises
+    - Contributed to the design and build of APIs for data exchange, gaining exposure
+        to REST and SOAP protocols
+    - Participated in data warehousing and data management projects, gaining hands-on
+        experience with Azure Data Lake and Power BI
