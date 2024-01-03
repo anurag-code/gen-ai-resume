@@ -8,3 +8,6 @@ openai-env/
 
 # Ignore environment-specific files
 .env
+
+# Ignore temp docx files
+~*.docx
