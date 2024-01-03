@@ -56,9 +56,8 @@ def main():
     # level 1 heading color
     level_1_heading_color=(255, 0, 0)
 
-    # Add EXPERIENCE section heading
+    # Add EXPERIENCE section
     doc.heading('EXPERIENCE', level=1, bold=True, color=level_1_heading_color)
-
     # Iterate through experience details
     for exp in exp_details[list(exp_details.keys())[0]]:
         for k,v in exp.items():
@@ -87,6 +86,7 @@ def main():
         doc.document.add_paragraph()   # to add empty line
     # doc.document.add_page_break() # Add Page break after experience
 
+
     # Skill section
     skills = doc.heading('SKILLS', level=1,bold=True, color=level_1_heading_color)
     skills.alignment = WD_ALIGN_PARAGRAPH.LEFT
@@ -94,12 +94,14 @@ def main():
         doc.document.add_paragraph(v,style='List Bullet')
     # doc.document.add_paragraph()   # to add empty line after the section
 
+
     # Projects section
     projects = doc.heading('PROJECTS', level=1,bold=True, color=level_1_heading_color)
     projects.alignment = WD_ALIGN_PARAGRAPH.LEFT
     for _,v in projects_details[list(projects_details.keys())[0]].items():
         doc.document.add_paragraph(v,style='List Bullet')
     # doc.document.add_paragraph()   # to add empty line
+
 
     # Education section
     edu = doc.heading('EDUCATION', level=1,bold=True, color=level_1_heading_color)
@@ -117,6 +119,7 @@ def main():
                 run.font.color.rgb = RGBColor(0, 0, 0)
     # doc.document.add_paragraph()   # to add empty line
 
+
     # Awards section
     awards = doc.heading('AWARDS', level=1,bold=True, color=level_1_heading_color)
     awards.alignment = WD_ALIGN_PARAGRAPH.LEFT
@@ -124,12 +127,14 @@ def main():
         doc.document.add_paragraph(v,style='List Bullet')
     # doc.document.add_paragraph()   # to add empty line
 
+
     # Add footer
     footer = doc.document.sections[0].footer
     paragraph = footer.paragraphs[0]
     run = paragraph.add_run()
     run.add_text('Resume - Your Name')
     run.font.size = Pt(8)
+
 
     # Get full output path
     # First note down relative path. .. is to go one level up from the script folder.
@@ -140,6 +145,7 @@ def main():
     doc.document.save(f'{output_folder_path}/resume_test_msword_{time.time()}.docx')
 
     print('\nSuccessfully created word file')
+
 
 
 if __name__ == '__main__':
