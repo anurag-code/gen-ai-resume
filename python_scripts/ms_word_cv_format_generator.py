@@ -21,6 +21,8 @@ class FormatMSword():
         return section_file_path_yaml
 
     def heading(self,text, level, bold=True, color=(0, 0, 0),align=WD_ALIGN_PARAGRAPH.LEFT):
+        '''Re-writing add_heading function of Document() for 
+            our requirements.'''
         heading_added = self.document.add_heading(text, level=level)
         heading_added.alignment =align
         run = heading_added.runs[0]
@@ -55,7 +57,7 @@ def main():
     level_1_heading_color=(255, 0, 0)
 
     # Add EXPERIENCE section heading
-    exper=doc.heading('EXPERIENCE', level=1, bold=True, color=level_1_heading_color)
+    doc.heading('EXPERIENCE', level=1, bold=True, color=level_1_heading_color)
 
     # Iterate through experience details
     for exp in exp_details[list(exp_details.keys())[0]]:
@@ -83,21 +85,21 @@ def main():
                     run.font.color.rgb = RGBColor(0, 0, 0)
                 
         doc.document.add_paragraph()   # to add empty line
-    # document.add_page_break() # Add Page break after experience
+    # doc.document.add_page_break() # Add Page break after experience
 
     # Skill section
     skills = doc.heading('SKILLS', level=1,bold=True, color=level_1_heading_color)
     skills.alignment = WD_ALIGN_PARAGRAPH.LEFT
     for _,v in skill_details[list(skill_details.keys())[0]].items():
         doc.document.add_paragraph(v,style='List Bullet')
-    # document.add_paragraph()   # to add empty line after the section
+    # doc.document.add_paragraph()   # to add empty line after the section
 
     # Projects section
     projects = doc.heading('PROJECTS', level=1,bold=True, color=level_1_heading_color)
     projects.alignment = WD_ALIGN_PARAGRAPH.LEFT
     for _,v in projects_details[list(projects_details.keys())[0]].items():
         doc.document.add_paragraph(v,style='List Bullet')
-    # document.add_paragraph()   # to add empty line
+    # doc.document.add_paragraph()   # to add empty line
 
     # Education section
     edu = doc.heading('EDUCATION', level=1,bold=True, color=level_1_heading_color)
@@ -113,14 +115,14 @@ def main():
                 run= key.add_run(f'     {v}')
                 run.bold = False
                 run.font.color.rgb = RGBColor(0, 0, 0)
-    # document.add_paragraph()   # to add empty line
+    # doc.document.add_paragraph()   # to add empty line
 
     # Awards section
     awards = doc.heading('AWARDS', level=1,bold=True, color=level_1_heading_color)
     awards.alignment = WD_ALIGN_PARAGRAPH.LEFT
     for _,v in awards_details[list(awards_details.keys())[0]].items():
         doc.document.add_paragraph(v,style='List Bullet')
-    # document.add_paragraph()   # to add empty line
+    # doc.document.add_paragraph()   # to add empty line
 
     # Add footer
     footer = doc.document.sections[0].footer
