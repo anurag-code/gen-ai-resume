@@ -2,6 +2,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import json
 import time,yaml,os
+import streamlit as st
 
 # Convert SQL to English sentences 
 def resume_part_prompt(job_reqmnt,section,words=200,specific_instructions=''):
@@ -127,8 +128,8 @@ def prompt_awards(job_reqmnt,words=100):
     return prompt
 
 
-
-if __name__ == '__main__':
+@st.cache_data  # Caching data because there is an api call. Thus if there is no change, then the there is no point calling API again.
+def create_content_yaml(job_requirement=''):
 
     # Load environment variables from .env file. 
     # NOTE: '.env' file should be saved in same folder level as script.
@@ -141,17 +142,21 @@ if __name__ == '__main__':
     client = OpenAI(api_key=api_key_openai)
 
     # job_reqmnt=''' '''
-    job_reqmnt='''Job Requirements: 
-        Qualifications & Experience:
-        - A degree in a related discipline is preferred.
-        - Hands-on data engineering expertise. Experience in building a data ingestion, transformation, and egress framework will be highly advantageous
-        - Knowledge of best practices for data warehousing, data management and architecture, with significant experience in data pipelines, frameworks, tools and technologies and their use in business contexts
-        - Exposure to developing technical designs, including data profiling, cataloguing, and mapping exercises
-        - Experience in the design and build of APIs (REST/SOAP) to push and pull data from various data systems and platforms
-        - Familiar working with DevSecOps tools, methodologies such as CI/CD with GitHub, and Azure DevOps
-        - Ideally you will have good knowledge of the Azure Data platform (Azure Synapse, Data Factory, Data Bricks, Data Lake, Power BI) and Azure cloud data technologies (Spark, ADLS2, CosmosDB, AKS, AEH).
-        - Strong SQL background particularly with capability to write performant queries and troubleshoot performance'''
 
+    if len(job_requirement)==0:
+        job_reqmnt='''Job Requirements: 
+            Qualifications & Experience:
+            - A degree in a related discipline is preferred.
+            - Hands-on data engineering expertise. Experience in building a data ingestion, transformation, and egress framework will be highly advantageous
+            - Knowledge of best practices for data warehousing, data management and architecture, with significant experience in data pipelines, frameworks, tools and technologies and their use in business contexts
+            - Exposure to developing technical designs, including data profiling, cataloguing, and mapping exercises
+            - Experience in the design and build of APIs (REST/SOAP) to push and pull data from various data systems and platforms
+            - Familiar working with DevSecOps tools, methodologies such as CI/CD with GitHub, and Azure DevOps
+            - Ideally you will have good knowledge of the Azure Data platform (Azure Synapse, Data Factory, Data Bricks, Data Lake, Power BI) and Azure cloud data technologies (Spark, ADLS2, CosmosDB, AKS, AEH).
+            - Strong SQL background particularly with capability to write performant queries and troubleshoot performance'''
+    else:
+        job_reqmnt=f'''Job Requirements:
+        {job_requirement}'''
 
     # create prompts for each section
     experience_prompt=prompt_employment(job_reqmnt)
@@ -228,19 +233,20 @@ if __name__ == '__main__':
     section_dict={'experience':experience,'skill':skill,'education':education,'projects':projects,'awards':awards}
     
     # we can use this to combine all json putputs , if reqd. Currently not used
-    section_details={}
+    # section_details={}
 
     # iterate through each key val in section_dict
     for section,var in section_dict.items():
         json_text = json.loads(var.choices[0].message.content)
-        print(f"\n{section}:\n{json_text}\n")
+        # print(f"\n{section}:\n{json_text}\n")
 
         # Specify the file path
         # Define the relative path to the output folder
         relative_path = "../section_yaml_files"
         # Create the full path to the output folder
-        output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
-        file_path_yaml = f'{output_folder}/resume_{section}.yaml'
+        # output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
+        file_path_yaml = f'{relative_path}/resume_{section}.yaml'
+        # file_path_yaml = f'{output_folder}/resume_{section}.yaml'
 
         # # write the dict file  into a json
         # with open(file_path, 'w') as json_file:
@@ -249,3 +255,7 @@ if __name__ == '__main__':
         # write the dict file  into a yaml
         with open(file_path_yaml, 'w') as yaml_file:
             yaml.dump(json_text, yaml_file,default_flow_style=False, indent=4,sort_keys=False)
+
+
+if __name__ == '__main__':
+    create_content_yaml()

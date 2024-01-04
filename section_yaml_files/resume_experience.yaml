@@ -1,25 +1,28 @@
 experience:
 -   employer: ABC Company
-    title: Data Engineer
+    title: Digital Business Analyst
     location: New York, NY
-    dates: Jan 2018 - Present
+    dates: January 2017 - Present
     description:
-    - Led the development of a data ingestion, transformation, and egress framework
-        resulting in improved data processing efficiency by 30%
-    - Designed and implemented data pipelines using Azure Data Factory and Azure Synapse
-        for seamless data integration
-    - Developed RESTful APIs to facilitate data exchange between different platforms,
-        improving data accessibility and usability
-    - Utilized strong SQL background to optimize queries and troubleshoot performance
-        issues, resulting in 20% reduction in query execution time
--   employer: XYZ Solutions
-    title: Data Engineering Intern
+    - Engaged with internal and external users to capture user and business needs,
+        resulting in identification of key opportunities.
+    - Collaborated with solution architects to design solutions aligning with architecture
+        standards for the program.
+    - Supported user engagement throughout project phases, providing ongoing business
+        and technical advice.
+    - Converted conceptual/theoretical models into technically sound product features,
+        writing user stories/PBIs for development.
+    - Developed content for business consumption, translating technical solutions
+        into simple, effective manner suitable for wider business consumption.
+    - Configured the SaaS platform to implement the stories/PBIs.
+    - Collaborated with user researchers and stakeholders to form the bigger strategic
+        picture.
+-   employer: XYZ Corporation
+    title: Technical Business Analyst
     location: San Francisco, CA
-    dates: May 2017 - Aug 2017
+    dates: June 2013 - December 2016
     description:
-    - Assisted in the development of technical designs for data profiling and cataloguing
-        exercises
-    - Contributed to the design and build of APIs for data exchange, gaining exposure
-        to REST and SOAP protocols
-    - Participated in data warehousing and data management projects, gaining hands-on
-        experience with Azure Data Lake and Power BI
+    - Analyzed and solved complex problems based on evidence, analysis, and investigation.
+    - Adapted and learned to use a variety of systems and configure SaaS platforms.
+    - Worked in agile and hybrid agile delivery practices, contributing to large scale
+        transformations.
