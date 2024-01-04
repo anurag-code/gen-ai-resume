@@ -1,7 +1,8 @@
 from docx import Document
 from docx.shared import Pt,RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-import json,yaml,time,os
+import json,yaml,time,os,glob
+import streamlit as st
 
 class FormatMSword():
 
@@ -31,7 +32,9 @@ class FormatMSword():
         return heading_added
 
 
-def main():
+
+@st.cache_resource  # Caching resource in order to reuse the word file generated at the end is there is no change in job requirement on rerunning.
+def create_ms_word_doc():
     # Create a new Word document instance
     doc=FormatMSword()
 
@@ -141,12 +144,22 @@ def main():
     relative_output_path = "../generated_output_files"
     # Create the full path to the output folder
     output_folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_output_path)
+    # remove any previously generated file from the folder
+    files_to_delete = glob.glob(os.path.join(output_folder_path, "resume_ideation_msword_*.docx"))
+    if len(files_to_delete)>0:
+        for file_path in files_to_delete:
+            os.remove(file_path)
+        print("Previously existing files have been deleted.")
+    else:
+        print("No previously existing files found.")
+
     # generate doc at path
-    doc.document.save(f'{output_folder_path}/resume_test_msword_{time.time()}.docx')
+    output_file_path=f'{output_folder_path}/resume_ideation_msword_{time.time()}.docx'
+    doc.document.save(output_file_path)
 
-    print('\nSuccessfully created word file')
-
+    return output_file_path
 
 
 if __name__ == '__main__':
-    main()
+    output_file_path=create_ms_word_doc()
+    print(f'\nSuccessfully created resume ideation word file at {output_file_path}')

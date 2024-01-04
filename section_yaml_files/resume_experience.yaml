@@ -1,25 +1,31 @@
 experience:
--   employer: ABC Company
-    title: Data Engineer
+-   employer: ABC Healthcare Organization
+    title: Business Analyst
     location: New York, NY
     dates: Jan 2018 - Present
     description:
-    - Led the development of a data ingestion, transformation, and egress framework
-        resulting in improved data processing efficiency by 30%
-    - Designed and implemented data pipelines using Azure Data Factory and Azure Synapse
-        for seamless data integration
-    - Developed RESTful APIs to facilitate data exchange between different platforms,
-        improving data accessibility and usability
-    - Utilized strong SQL background to optimize queries and troubleshoot performance
-        issues, resulting in 20% reduction in query execution time
--   employer: XYZ Solutions
-    title: Data Engineering Intern
+    - Conducted research and analysis to determine business requirements and specify
+        effective business processes, user stories, and use cases.
+    - Collaborated with stakeholders to manage project progress and changes in scope,
+        ensuring expectations were met.
+    - Prepared business cases defining potential benefits and options for achieving
+        these benefits through new processes.
+    - Facilitated workshops to scope requirements for projects, working closely with
+        development team and business stakeholders.
+    - Resolved issues, delivered practical solutions, and disseminated information
+        to support business outcomes under limited supervision.
+    - Worked closely with change managers to drive engagement and ensure successful
+        implementation of new processes.
+-   employer: XYZ Tech Solutions
+    title: Systems Analyst
     location: San Francisco, CA
-    dates: May 2017 - Aug 2017
+    dates: May 2015 - Dec 2017
     description:
-    - Assisted in the development of technical designs for data profiling and cataloguing
-        exercises
-    - Contributed to the design and build of APIs for data exchange, gaining exposure
-        to REST and SOAP protocols
-    - Participated in data warehousing and data management projects, gaining hands-on
-        experience with Azure Data Lake and Power BI
+    - Analyzed and documented business requirements, processes, and user stories for
+        large enterprise solutions.
+    - Collaborated with cross-functional teams to design engagement initiatives and
+        ensure effective coordination and planning.
+    - Utilized expertise in clinical systems to support the development and implementation
+        of healthcare organization's systems.
+    - Contributed to collaborative problem-solving and provided valuable insights
+        to drive successful project outcomes.
