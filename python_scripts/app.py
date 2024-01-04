@@ -20,6 +20,7 @@ if __name__=="__main__":
     # Input for Job description
     job_requirements = st.text_area('''Enter Job Requirements''', height=100)
 
+    # Add submit button. Also add if clause so that script move beyond it only if it is clicked.
     if st.button("Submit"):
         # Run the first script
         st.info("Creating Content for Ideation... ")
