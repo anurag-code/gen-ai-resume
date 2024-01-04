@@ -9,7 +9,7 @@ if __name__=="__main__":
     # Display image and title
     col1, col2 = st.columns([1, 5])  # Create columns for layout
     with col1:
-        st.image("../images/pic_cv.png", width=100)  # Adjust image size as needed
+        st.image("../images/pic_cv.png", width=100)  
     with col2:
         st.title("Resume Ideation")
 
@@ -24,7 +24,7 @@ if __name__=="__main__":
     # Input for Job description
     job_requirements = st.text_area('''Enter Job Requirements''', height=100)
 
-    # Add submit button. Also add if clause so that script move beyond it only if it is clicked.
+    # Add submit button. Also added if clause so that script move beyond it only if it is clicked.
     if st.button("Submit"):
         # Run the first script
         st.info("Creating Content for Ideation... ")
