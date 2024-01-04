@@ -5,9 +5,13 @@ from dotenv import load_dotenv
 import os
 
 if __name__=="__main__":
-    
-    # Create a title
-    st.title("Resume Ideation")
+
+    # Display image and title
+    col1, col2 = st.columns([1, 5])  # Create columns for layout
+    with col1:
+        st.image("../images/pic_cv.png", width=100)  # Adjust image size as needed
+    with col2:
+        st.title("Resume Ideation")
 
     st.markdown('''This app aims to help you in creation of your Resume,
      by helping you with the relevant content in your Resume based on job requirements.''')

@@ -1,31 +1,28 @@
 experience:
--   employer: ABC Healthcare Organization
-    title: Business Analyst
+-   employer: ABC Company
+    title: Digital Business Analyst
     location: New York, NY
-    dates: Jan 2018 - Present
+    dates: January 2017 - Present
     description:
-    - Conducted research and analysis to determine business requirements and specify
-        effective business processes, user stories, and use cases.
-    - Collaborated with stakeholders to manage project progress and changes in scope,
-        ensuring expectations were met.
-    - Prepared business cases defining potential benefits and options for achieving
-        these benefits through new processes.
-    - Facilitated workshops to scope requirements for projects, working closely with
-        development team and business stakeholders.
-    - Resolved issues, delivered practical solutions, and disseminated information
-        to support business outcomes under limited supervision.
-    - Worked closely with change managers to drive engagement and ensure successful
-        implementation of new processes.
--   employer: XYZ Tech Solutions
-    title: Systems Analyst
+    - Engaged with internal and external users to capture user and business needs,
+        resulting in identification of key opportunities.
+    - Collaborated with solution architects to design solutions aligning with architecture
+        standards for the program.
+    - Supported user engagement throughout project phases, providing ongoing business
+        and technical advice.
+    - Converted conceptual/theoretical models into technically sound product features,
+        writing user stories/PBIs for development.
+    - Developed content for business consumption, translating technical solutions
+        into simple, effective manner suitable for wider business consumption.
+    - Configured the SaaS platform to implement the stories/PBIs.
+    - Collaborated with user researchers and stakeholders to form the bigger strategic
+        picture.
+-   employer: XYZ Corporation
+    title: Technical Business Analyst
     location: San Francisco, CA
-    dates: May 2015 - Dec 2017
+    dates: June 2013 - December 2016
     description:
-    - Analyzed and documented business requirements, processes, and user stories for
-        large enterprise solutions.
-    - Collaborated with cross-functional teams to design engagement initiatives and
-        ensure effective coordination and planning.
-    - Utilized expertise in clinical systems to support the development and implementation
-        of healthcare organization's systems.
-    - Contributed to collaborative problem-solving and provided valuable insights
-        to drive successful project outcomes.
+    - Analyzed and solved complex problems based on evidence, analysis, and investigation.
+    - Adapted and learned to use a variety of systems and configure SaaS platforms.
+    - Worked in agile and hybrid agile delivery practices, contributing to large scale
+        transformations.

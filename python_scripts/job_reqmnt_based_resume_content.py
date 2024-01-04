@@ -233,7 +233,7 @@ def create_content_yaml(job_requirement=''):
     section_dict={'experience':experience,'skill':skill,'education':education,'projects':projects,'awards':awards}
     
     # we can use this to combine all json putputs , if reqd. Currently not used
-    section_details={}
+    # section_details={}
 
     # iterate through each key val in section_dict
     for section,var in section_dict.items():
@@ -244,8 +244,9 @@ def create_content_yaml(job_requirement=''):
         # Define the relative path to the output folder
         relative_path = "../section_yaml_files"
         # Create the full path to the output folder
-        output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
-        file_path_yaml = f'{output_folder}/resume_{section}.yaml'
+        # output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
+        file_path_yaml = f'{relative_path}/resume_{section}.yaml'
+        # file_path_yaml = f'{output_folder}/resume_{section}.yaml'
 
         # # write the dict file  into a json
         # with open(file_path, 'w') as json_file:

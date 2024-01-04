@@ -139,13 +139,12 @@ def create_ms_word_doc():
     run.font.size = Pt(8)
 
 
-    # Get full output path
-    # First note down relative path. .. is to go one level up from the script folder.
+    
+    # Note down relative path. '..' is to go one level up from the script folder.
     relative_output_path = "../generated_output_files"
-    # Create the full path to the output folder
-    output_folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_output_path)
+
     # remove any previously generated file from the folder
-    files_to_delete = glob.glob(os.path.join(output_folder_path, "resume_ideation_msword_*.docx"))
+    files_to_delete = glob.glob(f"{relative_output_path}/resume_ideation_msword_*.docx")
     if len(files_to_delete)>0:
         for file_path in files_to_delete:
             os.remove(file_path)
@@ -154,7 +153,7 @@ def create_ms_word_doc():
         print("No previously existing files found.")
 
     # generate doc at path
-    output_file_path=f'{output_folder_path}/resume_ideation_msword_{time.time()}.docx'
+    output_file_path=f'{relative_output_path}/resume_ideation_msword_{time.time()}.docx'
     doc.document.save(output_file_path)
 
     return output_file_path
