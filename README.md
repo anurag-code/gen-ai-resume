@@ -8,25 +8,24 @@
 
 ### Project Tree:
 
-┣ 📂generated_output_files
-┃ ┗ 📜resume_ideation_msword_1704410986.792585.docx
-┣ 📂notebooks
-┃ ┗ 📜MS_Word_CV_Formatter.ipynb
-┣ 📂python_scripts
-┃ ┣ 📜.env
-┃ ┣ 📜app.py
-┃ ┣ 📜job_reqmnt_based_resume_content.py
-┃ ┗ 📜ms_word_cv_format_generator.py
-┣ 📂section_yaml_files
-┃ ┣ 📜resume_awards.yaml
-┃ ┣ 📜resume_education.yaml
-┃ ┣ 📜resume_experience.yaml
-┃ ┣ 📜resume_projects.yaml
-┃ ┗ 📜resume_skill.yaml
-┣ 📜.gitignore
-┣ 📜LICENSE
-┣ 📜README.md
-┗ 📜requirements.txt
-┣ 📂images
-┃ ┣ 📜confusion.png
-┃ ┗ 📜pic_cv.png
+resume_gen_ai                                            
+├─ generated_output_files                                
+│  └─ resume_ideation_msword_[...].docx      
+├─ images                                                
+│  ├─ image1.png                                      
+│  └─ image2.png                                         
+├─ notebooks                                             
+│  └─ MS_Word_CV_Formatter.ipynb                         
+├─ python_scripts      
+│  ├─ app.py                                             
+│  ├─ job_reqmnt_based_resume_content.py                 
+│  └─ ms_word_cv_format_generator.py                     
+├─ section_yaml_files                                    
+│  ├─ resume_awards.yaml                                 
+│  ├─ resume_education.yaml                              
+│  ├─ resume_experience.yaml                             
+│  ├─ resume_projects.yaml                               
+│  └─ resume_skill.yaml                                  
+├─ LICENSE                                               
+├─ README.md                                             
+└─ requirements.txt
