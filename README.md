@@ -1,12 +1,4 @@
-### 1.  You would need the openai api key to run the application
-
-### 2.  To run the application locally: In the terminal                >> streamlit run app.py
-
-
-##### Create a .env file to save OPENAI_API_KEY. Create .env file in same folder as that of script.
-##### Section_Yaml_files folder has the section based yaml files, which are dynamically generated and are based on job requirements.
-
-### Project Tree:
+#### Project Tree:
 
 resume_gen_ai                                            
 ├─ generated_output_files                                
@@ -29,3 +21,12 @@ resume_gen_ai
 ├─ LICENSE                                               
 ├─ README.md                                             
 └─ requirements.txt
+
+
+##### 1.  You would need the openai api key to run the application.
+  ##### Create a .env file to save OPENAI_API_KEY. Create .env file in same folder as that of script as shown in tree structure above. '.env' is already added in .gitignore file.
+  ##### Or create an env variable.
+
+##### 2.  To run the application locally: In the terminal:          >> streamlit run app.py
+
+##### 3. Section_Yaml_files folder has the section based yaml files, which are dynamically generated and are based on job requirements.
