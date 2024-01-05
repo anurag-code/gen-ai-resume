@@ -2,27 +2,32 @@ experience:
 -   employer: ABC Company
     title: Digital Business Analyst
     location: New York, NY
-    dates: January 2017 - Present
+    dates: January 2018 - Present
     description:
     - Engaged with internal and external users to capture user and business needs,
-        resulting in identification of key opportunities.
-    - Collaborated with solution architects to design solutions aligning with architecture
-        standards for the program.
+        identifying opportunities.
+    - Worked closely with solution architects to design solutions within architecture
+        standards.
     - Supported user engagement throughout project phases, providing ongoing business
         and technical advice.
-    - Converted conceptual/theoretical models into technically sound product features,
-        writing user stories/PBIs for development.
+    - Converted conceptual/theoretical models into technically sound product features.
+    - Wrote user stories/PBIs for development, maintaining alignment with features
+        and dependencies.
     - Developed content for business consumption, translating technical solutions
         into simple, effective manner suitable for wider business consumption.
-    - Configured the SaaS platform to implement the stories/PBIs.
     - Collaborated with user researchers and stakeholders to form the bigger strategic
         picture.
+    - Configured the SaaS platform to implement the stories/PBIs.
 -   employer: XYZ Corporation
     title: Technical Business Analyst
     location: San Francisco, CA
-    dates: June 2013 - December 2016
+    dates: June 2015 - December 2017
     description:
-    - Analyzed and solved complex problems based on evidence, analysis, and investigation.
-    - Adapted and learned to use a variety of systems and configure SaaS platforms.
-    - Worked in agile and hybrid agile delivery practices, contributing to large scale
-        transformations.
+    - Analyzed and captured user and business needs, identifying opportunities for
+        technical solutions.
+    - Designed solutions within architecture standards, working closely with solution
+        architects.
+    - Provided ongoing business and technical advice, supporting user engagement throughout
+        project phases.
+    - Translated technical solutions into simple, effective content for business consumption.
+    - Configured SaaS platforms to implement technical solutions.
