@@ -1,33 +1,27 @@
 experience:
--   employer: ABC Company
-    title: Digital Business Analyst
+-   employer: ABC Healthcare
+    title: Business Analyst
     location: New York, NY
-    dates: January 2018 - Present
+    dates: Jan 2018 - Present
     description:
-    - Engaged with internal and external users to capture user and business needs,
-        identifying opportunities.
-    - Worked closely with solution architects to design solutions within architecture
-        standards.
-    - Supported user engagement throughout project phases, providing ongoing business
-        and technical advice.
-    - Converted conceptual/theoretical models into technically sound product features.
-    - Wrote user stories/PBIs for development, maintaining alignment with features
-        and dependencies.
-    - Developed content for business consumption, translating technical solutions
-        into simple, effective manner suitable for wider business consumption.
-    - Collaborated with user researchers and stakeholders to form the bigger strategic
-        picture.
-    - Configured the SaaS platform to implement the stories/PBIs.
--   employer: XYZ Corporation
-    title: Technical Business Analyst
+    - Conducted research and analysis to determine business requirements and specify
+        effective business processes, user stories, and use cases.
+    - Collaborated with stakeholders to manage project progress and expectations,
+        ensuring alignment with project scope.
+    - Prepared business cases defining potential benefits and options for achieving
+        these benefits through new processes.
+    - Facilitated workshops between development team and business stakeholders to
+        scope requirements for projects.
+    - Worked under limited supervision to resolve issues, deliver practical solutions,
+        and support business outcomes.
+    - Collaborated with change managers to drive engagement and ensure successful
+        implementation of solutions.
+-   employer: XYZ Solutions
+    title: Systems Analyst
     location: San Francisco, CA
-    dates: June 2015 - December 2017
+    dates: Jun 2015 - Dec 2017
     description:
-    - Analyzed and captured user and business needs, identifying opportunities for
-        technical solutions.
-    - Designed solutions within architecture standards, working closely with solution
-        architects.
-    - Provided ongoing business and technical advice, supporting user engagement throughout
-        project phases.
-    - Translated technical solutions into simple, effective content for business consumption.
-    - Configured SaaS platforms to implement technical solutions.
+    - Coordinated and designed engagement initiatives for large enterprise solutions.
+    - Utilized 3+ years of experience in systems development within healthcare organizations.
+    - Demonstrated understanding of clinical systems and contributed to the development
+        of effective solutions.

@@ -15,10 +15,11 @@ class FormatMSword():
 
     def get_full_path(self,section):
         # Define the relative path to the resume section files
-        relative_path = "../section_yaml_files"
-        # Create the full path to the output folder
-        output_folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
-        section_file_path_yaml = f'{output_folder_path}/resume_{section}.yaml'
+        relative_path = "./section_yaml_files"
+        # # Create the full path to the output folder
+        # output_folder_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
+        # section_file_path_yaml = f'{output_folder_path}/resume_{section}.yaml'
+        section_file_path_yaml = f'{relative_path}/resume_{section}.yaml'
         return section_file_path_yaml
 
     def heading(self,text, level, bold=True, color=(0, 0, 0),align=WD_ALIGN_PARAGRAPH.LEFT):
@@ -140,8 +141,8 @@ def create_ms_word_doc():
 
 
     
-    # Note down relative path. '..' is to go one level up from the script folder.
-    relative_output_path = "../generated_output_files"
+    # Note down relative path. './' is current workdir and '../' is to go one level up to the parent folder.
+    relative_output_path = "./generated_output_files"
 
     # remove any previously generated file from the folder
     files_to_delete = glob.glob(f"{relative_output_path}/resume_ideation_msword_*.docx")

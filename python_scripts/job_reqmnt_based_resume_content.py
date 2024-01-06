@@ -241,8 +241,8 @@ def create_content_yaml(job_requirement=''):
         # print(f"\n{section}:\n{json_text}\n")
 
         # Specify the file path
-        # Define the relative path to the output folder
-        relative_path = "../section_yaml_files"
+        # Define the relative path to the yaml output folder
+        relative_path = "section_yaml_files"
         # Create the full path to the output folder
         # output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
         file_path_yaml = f'{relative_path}/resume_{section}.yaml'
