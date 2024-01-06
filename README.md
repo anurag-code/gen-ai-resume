@@ -29,5 +29,6 @@ resume_gen_ai
   ##### Or create an env variable.
 
 ##### 2.  To run the application locally: In the terminal:          >> streamlit run app.py
+#####     You can also, use docker run to run the app.
 
 ##### 3. Section_Yaml_files folder has the section based yaml files, which are dynamically generated and are based on job requirements.

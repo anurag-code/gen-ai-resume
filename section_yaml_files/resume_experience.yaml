@@ -1,27 +1,29 @@
 experience:
--   employer: ABC Healthcare
-    title: Business Analyst
+-   employer: ABC Company
+    title: Data Engineer
     location: New York, NY
-    dates: Jan 2018 - Present
+    dates: January 2018 - Present
     description:
-    - Conducted research and analysis to determine business requirements and specify
-        effective business processes, user stories, and use cases.
-    - Collaborated with stakeholders to manage project progress and expectations,
-        ensuring alignment with project scope.
-    - Prepared business cases defining potential benefits and options for achieving
-        these benefits through new processes.
-    - Facilitated workshops between development team and business stakeholders to
-        scope requirements for projects.
-    - Worked under limited supervision to resolve issues, deliver practical solutions,
-        and support business outcomes.
-    - Collaborated with change managers to drive engagement and ensure successful
-        implementation of solutions.
--   employer: XYZ Solutions
-    title: Systems Analyst
+    - Led the development of a robust data ingestion, transformation, and egress framework,
+        resulting in improved data processing efficiency
+    - Designed and implemented data pipelines using best practices for data warehousing
+        and management, enhancing data accessibility and usability for business contexts
+    - Developed RESTful APIs to facilitate seamless data exchange between various
+        platforms and systems
+    - Utilized DevSecOps tools and methodologies for continuous integration and deployment,
+        ensuring data security and reliability
+    - Utilized Azure Data platform and cloud data technologies for efficient data
+        processing and analysis
+    - Optimized SQL queries for improved performance and troubleshooted query-related
+        issues
+-   employer: XYZ Corporation
+    title: Data Engineering Intern
     location: San Francisco, CA
-    dates: Jun 2015 - Dec 2017
+    dates: May 2017 - August 2017
     description:
-    - Coordinated and designed engagement initiatives for large enterprise solutions.
-    - Utilized 3+ years of experience in systems development within healthcare organizations.
-    - Demonstrated understanding of clinical systems and contributed to the development
-        of effective solutions.
+    - Assisted in data profiling, cataloguing, and mapping exercises to support technical
+        design and development
+    - Contributed to the design and implementation of data ingestion processes and
+        APIs for data exchange
+    - Gained exposure to Azure Data platform and cloud data technologies, acquiring
+        foundational knowledge in data processing and analysis
