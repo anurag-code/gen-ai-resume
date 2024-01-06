@@ -2,10 +2,10 @@
 
 resume_gen_ai                                            
 ├─ generated_output_files                                
-│  └─ resume_ideation_msword_1704516354.0136478.docx     
+│  └─ resume_ideation_msword_[...].docx     
 ├─ images                                                
-│  ├─ confusion.png                                      
-│  └─ pic_cv.png                                         
+│  ├─ image1.png                                      
+│  └─ image2.png                                         
 ├─ notebooks                                             
 │  └─ MS_Word_CV_Formatter.ipynb                         
 ├─ python_scripts     
