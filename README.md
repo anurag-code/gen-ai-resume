@@ -2,13 +2,13 @@
 
 resume_gen_ai                                            
 ├─ generated_output_files                                
-│  └─ resume_ideation_msword_[..].docx     
+│  └─ resume_ideation_msword_1704516354.0136478.docx     
 ├─ images                                                
-│  ├─ image1.png                                      
-│  └─ image2.png                                         
+│  ├─ confusion.png                                      
+│  └─ pic_cv.png                                         
 ├─ notebooks                                             
 │  └─ MS_Word_CV_Formatter.ipynb                         
-├─ python_scripts    
+├─ python_scripts     
 │  ├─ app.py                                             
 │  ├─ job_reqmnt_based_resume_content.py                 
 │  └─ ms_word_cv_format_generator.py                     
@@ -21,7 +21,7 @@ resume_gen_ai
 ├─ Dockerfile                                            
 ├─ LICENSE                                               
 ├─ README.md                                             
-└─ requirements.txt 
+└─ requirements.txt                                      
 
 
 ##### 1.  You would need the openai api key to run the application.
