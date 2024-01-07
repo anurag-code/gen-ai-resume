@@ -5,25 +5,21 @@ experience:
     dates: January 2018 - Present
     description:
     - Led the development of a robust data ingestion, transformation, and egress framework,
-        resulting in improved data processing efficiency
-    - Designed and implemented data pipelines using best practices for data warehousing
-        and management, enhancing data accessibility and usability for business contexts
-    - Developed RESTful APIs to facilitate seamless data exchange between various
-        platforms and systems
-    - Utilized DevSecOps tools and methodologies for continuous integration and deployment,
-        ensuring data security and reliability
-    - Utilized Azure Data platform and cloud data technologies for efficient data
-        processing and analysis
-    - Optimized SQL queries for improved performance and troubleshooted query-related
-        issues
+        resulting in improved data processing efficiency by 40%
+    - Designed and implemented data pipelines using Azure Data Factory and Azure Synapse
+        for seamless data integration and management
+    - Collaborated with cross-functional teams to develop technical designs and APIs
+        for efficient data exchange between systems
+    - Utilized strong SQL background to optimize queries and troubleshoot performance
+        issues, leading to 30% reduction in query execution time
 -   employer: XYZ Corporation
     title: Data Engineering Intern
     location: San Francisco, CA
     dates: May 2017 - August 2017
     description:
-    - Assisted in data profiling, cataloguing, and mapping exercises to support technical
-        design and development
-    - Contributed to the design and implementation of data ingestion processes and
-        APIs for data exchange
-    - Gained exposure to Azure Data platform and cloud data technologies, acquiring
-        foundational knowledge in data processing and analysis
+    - Assisted in the development of data profiling and cataloguing exercises to support
+        data management and architecture initiatives
+    - Contributed to the design and build of REST APIs for seamless data transfer
+        between platforms
+    - Gained exposure to DevSecOps tools and methodologies, including CI/CD with GitHub
+        and Azure DevOps

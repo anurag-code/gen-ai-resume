@@ -41,21 +41,25 @@ def prompt_employment(job_reqmnt,words=150):
     return prompt
 
 
-def prompt_skill(job_reqmnt,words=150):
+def prompt_skill(job_reqmnt,words=200):
 
-    prompt = f"""Please fill in the required information for an Skill section of a Sample Resume.  Job Requirements for sample resume is given below. 
+    prompt = f"""Please fill in the required information for an Skill section of a Resume strictly based on the Job Requirements.  Job Requirements for sample resume is given below. 
 
-    Required Keys for Json output for the Experience section of the resume are given below. Candidate will have multiple skills.:
+    Required Keys for Json output for the Experience section of the resume are given below. Candidate can have more skills than mentioned below:
     
-    'skill 1': text
-    'skill 2': text
-    'skill 3': text
-    'skill 4': text
-    'skill 5': text
-    'skill 6': text
+    
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    ['skill_Name': text,'skill_Description': text]
+    
 
-    Please note that Each Skill in the list should be explained very briefly in less than 10 words for each skill in the list. Output should be less than {words} words.
-
+    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Output should be less than {words} words.
+    Skill section should not mention about professional degree.
 
     {job_reqmnt}
 
