@@ -1,6 +1,8 @@
 from docx import Document
 from docx.shared import Pt,RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.table import WD_ALIGN_VERTICAL #WD_ALIGN_HORIZONTAL
+
 import json,yaml,time,os,glob
 import streamlit as st
 
@@ -94,8 +96,34 @@ def create_ms_word_doc():
     # Skill section
     skills = doc.heading('SKILLS', level=1,bold=True, color=level_1_heading_color)
     skills.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    for _,v in skill_details[list(skill_details.keys())[0]].items():
-        doc.document.add_paragraph(v,style='List Bullet')
+
+    # Add a table with two columns
+    table = doc.document.add_table(rows=1, cols=2)
+    table.style = 'TableGrid'
+    table.columns.autofit = False
+
+    # Set column widths
+    table.columns[0].width = Pt(50)
+    table.columns[1].width = Pt(400)
+
+    # Add header row
+    header_row = table.rows[0].cells
+    header_row[0].text = 'Key Skill'
+    header_row[1].text = 'Skill Description'
+
+    # Make the table header bold
+    for cell in header_row:
+        cell.paragraphs[0].runs[0].bold = True
+
+    skills_data=skill_details[list(skill_details.keys())[0]]
+    # Add data to table
+    for skill in skills_data:
+        row_cells = table.add_row().cells
+        skill_key=list(skill.keys())
+        # Make the skill name bold
+        skill_name_cell = row_cells[0].paragraphs[0].add_run(skill[skill_key[0]])
+        skill_name_cell.bold = True
+        row_cells[1].text = skill[skill_key[1]]
     # doc.document.add_paragraph()   # to add empty line after the section
 
 
