@@ -1,25 +1,36 @@
 experience:
 -   employer: ABC Company
-    title: Data Engineer
+    title: Business Analyst
     location: New York, NY
     dates: January 2018 - Present
     description:
-    - Led the development of a robust data ingestion, transformation, and egress framework,
-        resulting in improved data processing efficiency by 40%
-    - Designed and implemented data pipelines using Azure Data Factory and Azure Synapse
-        for seamless data integration and management
-    - Collaborated with cross-functional teams to develop technical designs and APIs
-        for efficient data exchange between systems
-    - Utilized strong SQL background to optimize queries and troubleshoot performance
-        issues, leading to 30% reduction in query execution time
+    - Gathered requirements over a three-month period, engaging with key stakeholders
+        to understand business needs.
+    - Executed business analysis tasks, contributing to the successful implementation
+        of projects and workstreams.
+    - Facilitated the discovery of objectives, outcomes, and scope for assigned projects,
+        collaborating with stakeholders to ensure a clear understanding of project
+        goals.
+    - Coordinated planning, stand-ups, retrospectives, and other processes to empower
+        the team in delivering value.
+    - Demonstrated a solutions-focused mindset in all activities, showcasing creative
+        thinking and resourcefulness in problem-solving.
+    - Communicated effectively and responsively with diverse audiences, including
+        volunteers, partners, suppliers, and colleagues.
+    - Exhibited effective stakeholder management skills, engaging with various stakeholders
+        to ensure alignment with organizational objectives.
 -   employer: XYZ Corporation
-    title: Data Engineering Intern
+    title: Business Analyst
     location: San Francisco, CA
-    dates: May 2017 - August 2017
+    dates: June 2015 - December 2017
     description:
-    - Assisted in the development of data profiling and cataloguing exercises to support
-        data management and architecture initiatives
-    - Contributed to the design and build of REST APIs for seamless data transfer
-        between platforms
-    - Gained exposure to DevSecOps tools and methodologies, including CI/CD with GitHub
-        and Azure DevOps
+    - Gathered requirements for complex IT systems, demonstrating a solutions-focused
+        mindset in problem-solving.
+    - Assisted in executing and developing test cases when necessary, contributing
+        to the successful delivery of projects.
+    - Coordinated a team of business and technical specialists, along with third-party
+        vendors, to ensure effective delivery of workstreams.
+    - Managed stakeholders through effective communication, consultation, planning,
+        influencing, and negotiation.
+    - Contributed project management experience and skills, enhancing the overall
+        delivery of projects.
