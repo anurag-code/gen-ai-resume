@@ -20,10 +20,10 @@ def resume_part_prompt(job_reqmnt,section,words=200,specific_instructions=''):
 
     return prompt
 
-def prompt_employment(job_reqmnt,words=150):
+def prompt_employment(job_reqmnt,words=225):
 
     prompt = f"""Please fill in the required information for an Experience section of a Sample Resume.  Job Requirements for sample resume is given below.
-    Output should be less than {words} words.
+    Output should be strictly less than {words} words.
 
     Required Keys and value types for Json output for the Experience section of the resume are given below. Candidate may have experience in more than one companies.:
 
@@ -102,7 +102,7 @@ def prompt_projects(job_reqmnt,words=100):
     'Project 2': text
     'Project 3': text
     
-    Project description should be limited to one or two lines only. Not more than 3 projects. Output should be less than {words} words.
+    Project description should be limited to one or two lines only. Not more than 3 projects. Output should be strictly less than {words} words.
 
 
     {job_reqmnt}
@@ -114,7 +114,7 @@ def prompt_projects(job_reqmnt,words=100):
 
 def prompt_awards(job_reqmnt,words=100):
 
-    prompt = f"""Please fill in the required information for an Awards section of a Sample Resume.  Job Requirements for sample resume is given below. 
+    prompt = f"""Please fill in the required information for an Achievements/Awards section of a Sample Resume.  Job Requirements for sample resume is given below. 
 
 
     Required Key and value type for Json output for the Awards section of the resume is given below:
