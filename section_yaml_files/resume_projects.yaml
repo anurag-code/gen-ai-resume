@@ -1,10 +1,8 @@
 Projects:
-    Project 1: Gathered requirements and facilitated objective discovery for a complex
-        IT system over a three-month period, collaborating with key stakeholders to
-        ensure clear understanding of project goals.
-    Project 2: Coordinated planning and execution of end-to-end delivery as a crucial
-        team member, working with business and technical specialists as well as third-party
-        vendors to successfully implement projects and workstreams.
-    Project 3: Assisted in developing and executing test cases, showcasing a solutions-focused
-        mindset and resourcefulness in problem-solving, while effectively communicating
-        with diverse stakeholders to ensure alignment with organizational objectives.
+    Project 1: Developed a data ingestion and transformation framework using Azure
+        Data Factory and Azure Synapse, enabling efficient data processing and analysis
+        for business insights
+    Project 2: Designed and implemented RESTful APIs to push and pull data from various
+        data systems and platforms, improving data accessibility and integration
+    Project 3: Built a data warehousing solution using Azure Data Lake and CosmosDB,
+        enhancing data management and architecture for advanced analytics capabilities

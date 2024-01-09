@@ -37,7 +37,7 @@ class FormatMSword():
 
 # Caching resource in order to reuse the word file generated at the end;
 # so that there is no change in job requirement on re-running.
-@st.cache_resource
+# @st.cache_resource
 def create_ms_word_doc():
     # Create a new Word document instance
     doc=FormatMSword()

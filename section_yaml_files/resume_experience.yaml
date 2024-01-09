@@ -1,36 +1,28 @@
-experience:
--   employer: ABC Company
-    title: Business Analyst
-    location: New York, NY
-    dates: January 2018 - Present
+Experience:
+-   employer: ANZ Bank
+    title: Lead Analytics Engineer (Risk Tech)
+    location: Melbourne
+    dates: June 2021- Till Now
     description:
-    - Gathered requirements over a three-month period, engaging with key stakeholders
-        to understand business needs.
-    - Executed business analysis tasks, contributing to the successful implementation
-        of projects and workstreams.
-    - Facilitated the discovery of objectives, outcomes, and scope for assigned projects,
-        collaborating with stakeholders to ensure a clear understanding of project
-        goals.
-    - Coordinated planning, stand-ups, retrospectives, and other processes to empower
-        the team in delivering value.
-    - Demonstrated a solutions-focused mindset in all activities, showcasing creative
-        thinking and resourcefulness in problem-solving.
-    - Communicated effectively and responsively with diverse audiences, including
-        volunteers, partners, suppliers, and colleagues.
-    - Exhibited effective stakeholder management skills, engaging with various stakeholders
-        to ensure alignment with organizational objectives.
--   employer: XYZ Corporation
-    title: Business Analyst
-    location: San Francisco, CA
-    dates: June 2015 - December 2017
+    - Led the development of a robust data ingestion, transformation, and egress framework
+        for risk analytics, resulting in 30% reduction in data processing time
+    - Designed and implemented data pipelines, frameworks, and tools, improving data
+        management and architecture best practices
+    - Developed APIs (REST/SOAP) to efficiently push and pull data from various data
+        systems, enhancing data accessibility and integration
+-   employer: Sensis Pty Ltd
+    title: Analytics Data Developer (Analytics Centre of Excellence)
+    location: Melbourne
+    dates: "June 2017 \u2013 June 2021"
     description:
-    - Gathered requirements for complex IT systems, demonstrating a solutions-focused
-        mindset in problem-solving.
-    - Assisted in executing and developing test cases when necessary, contributing
-        to the successful delivery of projects.
-    - Coordinated a team of business and technical specialists, along with third-party
-        vendors, to ensure effective delivery of workstreams.
-    - Managed stakeholders through effective communication, consultation, planning,
-        influencing, and negotiation.
-    - Contributed project management experience and skills, enhancing the overall
-        delivery of projects.
+    - Contributed to the development of technical designs, including data profiling,
+        cataloguing, and mapping exercises, enhancing data quality and governance
+    - Utilized DevSecOps tools and methodologies for continuous integration and delivery,
+        ensuring efficient data engineering processes
+-   employer: Thryv Pty Ltd
+    title: Consultant (MoD)
+    location: Melbourne
+    dates: "June 2015 \u2013 June 2017"
+    description:
+    - Gained exposure to Azure Data platform and cloud data technologies, laying the
+        foundation for future proficiency in Azure cloud data technologies

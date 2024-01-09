@@ -1,24 +1,22 @@
 Skills:
--   skill_Name: Business Analysis
-    skill_Description: Proven experience in gathering requirements for complex IT
-        systems and executing business analysis tasks to contribute to successful
-        project implementation.
--   skill_Name: Stakeholder Management
-    skill_Description: Effective stakeholder management skills, including communication,
-        consultation, planning, influencing, and negotiation to ensure alignment with
-        organizational objectives.
--   skill_Name: Team Coordination
-    skill_Description: Ability to coordinate planning, stand-ups, retrospectives,
-        and empower the team in delivering value. Experience in effectively coordinating
-        a team of business and technical specialists, along with third-party vendors.
--   skill_Name: Effective Communication
-    skill_Description: Demonstrated ability to communicate effectively and responsively
-        with diverse audiences, including volunteers, partners, suppliers, and colleagues.
-        Cultivate strong relationships through clear and concise communication.
--   skill_Name: Objective Discovery and Scope Definition
-    skill_Description: Facilitate the discovery of objectives, outcomes, and scope
-        for assigned projects and workstreams. Collaborate with stakeholders to ensure
-        a clear understanding of project goals.
--   skill_Name: Solutions-Focused Approach
-    skill_Description: Demonstrate a solutions-focused mindset in all activities,
-        showcasing creative thinking and resourcefulness in problem-solving.
+-   skill_Name: Data Engineering
+    skill_Description: Hands-on expertise in data engineering, including building
+        data ingestion, transformation, and egress framework
+-   skill_Name: Data Warehousing
+    skill_Description: Knowledge of best practices for data warehousing, data management,
+        and architecture
+-   skill_Name: Data Pipelines
+    skill_Description: Significant experience in data pipelines, frameworks, tools,
+        and technologies
+-   skill_Name: API Development
+    skill_Description: Experience in designing and building APIs (REST/SOAP) for data
+        integration
+-   skill_Name: DevSecOps
+    skill_Description: Familiarity with DevSecOps tools and methodologies, including
+        CI/CD with GitHub and Azure DevOps
+-   skill_Name: Azure Data Platform
+    skill_Description: Good knowledge of the Azure Data platform and Azure cloud data
+        technologies
+-   skill_Name: SQL
+    skill_Description: Strong background in SQL with the capability to write performant
+        queries and troubleshoot performance

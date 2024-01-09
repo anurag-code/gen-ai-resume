@@ -20,120 +20,159 @@ def resume_part_prompt(job_reqmnt,section,words=200,specific_instructions=''):
 
     return prompt
 
-def prompt_employment(job_reqmnt,words=225):
+def prompt_employment(job_reqmnt,exp_old,words=225):
 
-    prompt = f"""Please fill in the required information for an Experience section of a Sample Resume.  Job Requirements for sample resume is given below.
-    Output should be strictly less than {words} words.
+    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Experience section of a Resume. It should be done 
+    in step by step. First step is to read the Job requirement given below. Second step is to read the existing content 
+    about Experience section from old Resume. Third Step, enhance the Experience section from old Resume based on the job requirements.
+    Description of Experience should also include some impact with some quantification.
+    Final output should be in Json format.
+   
+    Output should be strictly less than {words} tokens.
 
     Required Keys and value types for Json output for the Experience section of the resume are given below. Candidate may have experience in more than one companies.:
-
-    employer: text
-    title: text
-    location: text
-    dates: text
-    description: list 
+    
+    Experience:
+        employer: text
+        title: text
+        location: text
+        dates: text
+        description: list 
     
 
     {job_reqmnt}
+
+
+    Experience Section from Old Resume:
+    {exp_old}
+
 
     """
 
     return prompt
 
 
-def prompt_skill(job_reqmnt,words=200):
+def prompt_skill(job_reqmnt,skill_old,words=200):
 
-    prompt = f"""Please fill in the required information for an Skill section of a Resume strictly based on the Job Requirements.  Job Requirements for sample resume is given below. 
+    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Skills section of a Resume. This work should be done 
+    in step by step manner. First step is to read the Job requirement given below. Second step is to read the existing content 
+    about Skills section from old Resume. Third Step, enhance the Skills section from old Resume based on the job requirements.
+    Final output should be in Json format.
 
     Required Keys for Json output for the Experience section of the resume are given below. Candidate can have more skills than mentioned below:
     
-    
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
-    ['skill_Name': text,'skill_Description': text]
+    Skills:
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
+        ['skill_Name': text,'skill_Description': text]
     
 
-    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Output should be less than {words} words.
+    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Output should be less than {words} tokens.
     Skill section should not mention about professional degree.
 
     {job_reqmnt}
 
+
+    Skills Section from Old Resume:
+    {skill_old}
+
     """
 
     return prompt
 
 
-def prompt_education(job_reqmnt,words=75):
+def prompt_education(job_reqmnt,education_old,words=75):
 
-    prompt = f"""Please fill in the required information for an Education section of a Sample Resume.  Job Requirements for sample resume is given below. 
-
+    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Education section of a Resume. This work should be done 
+    in step by step manner. First step is to read the Job requirement given below. Second step is to read the existing content 
+    about Education section from old Resume. Third Step, enhance the Education section from old Resume based on the job requirements.
+    Final output should be in Json format.
 
     Required Key and value type for Json output for the Education section of the resume is given below. Candidate may have more than one degree:
     
-    'Institution Name': text
-    'Degree Name': text
-    'Year': Numeric
+    Education:
+        'Institution Name': text
+        'Degree Name': text
+        'Year': Numeric
 
     
     Please note that Education should only include only the name of last University attended, degree name , and the year in which it was attended.
-    Certifications or other coursework should NOT be mentioned here. Output should be less than {words} words.
+    Certifications or other coursework should NOT be mentioned here. Output should be less than {words} tokens.
 
 
     {job_reqmnt}
+
+
+    Education Section from Old Resume:
+    {education_old}
 
     """
 
     return prompt
 
 
-def prompt_projects(job_reqmnt,words=100):
+def prompt_projects(job_reqmnt,project_old,words=100):
 
-    prompt = f"""Please fill in the required information for an Projects section of a Sample Resume.  Job Requirements for sample resume is given below. 
-
+    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Projects section of a Resume. This work should be done 
+    in step by step manner. First step is to read the Job requirement given below. Second step is to read the existing content 
+    about Projects section from old Resume. Third Step, enhance the Projects section from old Resume based on the job requirements.
+    Final output should be in Json format.
 
     Required Key and value type for Json output for the Projects section of the resume is given below:
     
-    'Project 1': text
-    'Project 2': text
-    'Project 3': text
+    Projects:
+        'Project 1': text
+        'Project 2': text
+        'Project 3': text
     
-    Project description should be limited to one or two lines only. Not more than 3 projects. Output should be strictly less than {words} words.
+    Project description should be limited to one or two lines only.  Output should be strictly less than {words} tokens.
 
 
     {job_reqmnt}
+
+
+    Projects Section from Old Resume:
+    {project_old}
 
     """
 
     return prompt
 
 
-def prompt_awards(job_reqmnt,words=100):
+def prompt_awards(job_reqmnt,awards_old,words=100):
 
-    prompt = f"""Please fill in the required information for an Achievements/Awards section of a Sample Resume.  Job Requirements for sample resume is given below. 
-
+    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Awards section of a Resume. This work should be done 
+    in step by step manner. First step is to read the Job requirement given below. Second step is to read the existing content 
+    about Awards section from old Resume. Third Step, enhance the Awards section from old Resume based on the job requirements.
+    Final output should be in Json format.
 
     Required Key and value type for Json output for the Awards section of the resume is given below:
     
-    'Award 1': text
-    'Award 2': text
+    Awards:
+        'Award 1': text
+        'Award 2': text
     
-    Award description should be limited to one line or less only. Not more than 2 awards. Output should be less than {words} words.
+    Each Award description should be limited to one line or less only. Output should be less than {words} tokens.
 
 
     {job_reqmnt}
+
+
+    Awards Section from Old Resume:
+    {awards_old}
 
     """
 
     return prompt
 
 
-@st.cache_data  # Caching data because there is an api call. Thus if there is no change, then the there is no point calling API again.
-def create_content_yaml(job_requirement=''):
+# @st.cache_data  # Caching data because there is an api call. Thus if there is no change, then the there is no point calling API again.
+def create_content_yaml(exp_old,exp_words,skills_old,skills_words,education_old,education_words,awards_old,awards_words,projects_old,projects_words,job_requirement=''):
 
     # Load environment variables from .env file. 
     # NOTE: '.env' file should be saved in same folder level as script.
@@ -162,12 +201,13 @@ def create_content_yaml(job_requirement=''):
         job_reqmnt=f'''Job Requirements:
         {job_requirement}'''
 
+
     # create prompts for each section
-    experience_prompt=prompt_employment(job_reqmnt)
-    skill_prompt=prompt_skill(job_reqmnt)
-    education_prompt=prompt_education(job_reqmnt)
-    projects_prompt=prompt_projects(job_reqmnt)
-    awards_prompt=prompt_awards(job_reqmnt)
+    experience_prompt=prompt_employment(job_reqmnt,exp_old,words=exp_words)
+    skill_prompt=prompt_skill(job_reqmnt,skills_old,words=skills_words)
+    education_prompt=prompt_education(job_reqmnt,education_old,words=education_words)
+    projects_prompt=prompt_projects(job_reqmnt,projects_old,words=projects_words)
+    awards_prompt=prompt_awards(job_reqmnt,awards_old,words=awards_words)
 
     # Get the output from OpenAI using propmts for each section
     experience = client.chat.completions.create(
@@ -177,7 +217,7 @@ def create_content_yaml(job_requirement=''):
         {"role": "user", "content": experience_prompt}
         ],
         response_format={ "type": "json_object" },
-        max_tokens=500,
+        max_tokens=1000,
         temperature=0.3
     )
 
@@ -190,7 +230,7 @@ def create_content_yaml(job_requirement=''):
         {"role": "system", "content": "You are an expert in Resume Building, skilled in creation of resume based on job requirements and output results in form of JSON format."},
         {"role": "user", "content": skill_prompt}
         ],
-        max_tokens=500,
+        max_tokens=400,
         temperature=0.3
     )
 
@@ -203,7 +243,7 @@ def create_content_yaml(job_requirement=''):
         {"role": "system", "content": "You are an expert in Resume Building, skilled in creation of resume based on job requirements and output results in form of JSON format."},
         {"role": "user", "content": education_prompt}
         ],
-        max_tokens=500,
+        max_tokens=400,
         temperature=0.3
     )
 
@@ -216,7 +256,7 @@ def create_content_yaml(job_requirement=''):
         {"role": "system", "content": "You are an expert in Resume Building, skilled in creation of resume based on job requirements and output results in form of JSON format."},
         {"role": "user", "content": projects_prompt}
         ],
-        max_tokens=500,
+        max_tokens=700,
         temperature=0.3
     )
 
@@ -229,7 +269,7 @@ def create_content_yaml(job_requirement=''):
         {"role": "user", "content": awards_prompt}
         ],
         response_format={ "type": "json_object" },
-        max_tokens=500,
+        max_tokens=400,
         temperature=0.3
     )
 
