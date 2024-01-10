@@ -1,8 +1,10 @@
 Projects:
-    Project 1: Developed a data ingestion and transformation framework using Azure
-        Data Factory and Azure Synapse, enabling efficient data processing and analysis
-        for business insights
-    Project 2: Designed and implemented RESTful APIs to push and pull data from various
-        data systems and platforms, improving data accessibility and integration
-    Project 3: Built a data warehousing solution using Azure Data Lake and CosmosDB,
-        enhancing data management and architecture for advanced analytics capabilities
+    Project 1: Developed a campaign optimization tool for Sales team, involving data
+        ingestion, transformation, and egress framework for effective data management
+        and architecture. Built APIs (REST/SOAP) to push and pull data from various
+        data systems and platforms. Utilized strong SQL background for writing performant
+        queries and troubleshooting performance.
+    Project 2: Conceptualized & developed a text summarization application, involving
+        technical designs, data profiling, and cataloguing exercises. Familiar with
+        DevSecOps tools and methodologies such as CI/CD with GitHub, and exposure
+        to Azure Data platform and cloud data technologies.

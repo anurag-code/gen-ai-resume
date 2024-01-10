@@ -28,7 +28,7 @@ def prompt_employment(job_reqmnt,exp_old,words=225):
     Description of Experience should also include some impact with some quantification.
     Final output should be in Json format.
    
-    Output should be strictly less than {words} tokens.
+    Ensure that the length of the total output is less than {words} words.
 
     Required Keys and value types for Json output for the Experience section of the resume are given below. Candidate may have experience in more than one companies.:
     
@@ -72,7 +72,7 @@ def prompt_skill(job_reqmnt,skill_old,words=200):
         ['skill_Name': text,'skill_Description': text]
     
 
-    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Output should be less than {words} tokens.
+    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Ensure that the length of the total output is less than {words} words.
     Skill section should not mention about professional degree.
 
     {job_reqmnt}
@@ -102,7 +102,7 @@ def prompt_education(job_reqmnt,education_old,words=75):
 
     
     Please note that Education should only include only the name of last University attended, degree name , and the year in which it was attended.
-    Certifications or other coursework should NOT be mentioned here. Output should be less than {words} tokens.
+    Certifications or other coursework should NOT be mentioned here. Ensure that the length of the total output is less than {words} words.
 
 
     {job_reqmnt}
@@ -130,7 +130,7 @@ def prompt_projects(job_reqmnt,project_old,words=100):
         'Project 2': text
         'Project 3': text
     
-    Project description should be limited to one or two lines only.  Output should be strictly less than {words} tokens.
+    Project description should be limited to one or two lines only.  Ensure that the length of the total output is less than {words} words.
 
 
     {job_reqmnt}
@@ -157,7 +157,8 @@ def prompt_awards(job_reqmnt,awards_old,words=100):
         'Award 1': text
         'Award 2': text
     
-    Each Award description should be limited to one line or less only. Output should be less than {words} tokens.
+    Each Award description should be limited to one line or less only. 
+    Ensure that the length of the total output is less than {words} words.
 
 
     {job_reqmnt}

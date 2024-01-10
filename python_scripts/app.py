@@ -11,56 +11,97 @@ if __name__=="__main__":
     with col1:
         st.image("./images/pic_cv.png", width=100)
     with col2:
-        st.title("Resume Ideation")
+        st.title("Resume Assistant")
+
+    job_req_default='''Job Requirements: 
+        Qualifications & Experience:
+        - Hands-on data engineering expertise. Experience in building a data ingestion, transformation, and egress framework will be highly advantageous
+        - Knowledge of best practices for data warehousing, data management and architecture, with significant experience in data pipelines, frameworks, tools and technologies and their use in business contexts
+        - Exposure to developing technical designs, including data profiling, cataloguing, and mapping exercises
+        - Experience in the design and build of APIs (REST/SOAP) to push and pull data from various data systems and platforms
+        - Familiar working with DevSecOps tools, methodologies such as CI/CD with GitHub, and Azure DevOps
+        - Ideally you will have good knowledge of the Azure Data platform (Azure Synapse, Data Factory, Data Bricks, Data Lake, Power BI) and Azure cloud data technologies (Spark, ADLS2, CosmosDB, AKS, AEH).
+        - Strong SQL background particularly with capability to write performant queries and troubleshoot performance'''
+
+    experience_default='''
+    June 2018- Till Now,  Lead Engineer , ABC Company, New York 
+    June 2017 – June 2018, Developer, XYZ Pty Ltd, Chicago
+    June 2015 – June 2017, Consultant, QWE Pty Ltd, New York
+    '''
+
+    skill_default='''
+    Programming Language: C++, Python & R
+    Big Data: PySpark, Databricks
+    Digital Analytics: Google Analytics, Adobe Analytics
+    '''
+
+    edu_default='''
+    MS (2014-2015) - Data Science, RMIT, Melbourne 
+    BS (2008-2012) - Mechanical Engineering, Melbourne Univerity, Melbourne
+    '''
+
+    project_default='''
+    - Developed a campaign optimization tool for Sales team.
+    - Conceptualized & developed a text summarization application. 
+    '''
+
+    awards_default='''Employee of The Year Award, 2019'''
+
 
     st.markdown('''This app aims to help you in creation of your Resume,
      by helping you with the relevant content in your Resume based on job requirements.''')
-
     st.markdown("To get some help in your Resume, you need to follow below steps.")
-    st.markdown("Step 1. Enter job requirements in the box below.")
-    st.markdown("""Step 2. Copy and Paste texts for different sections (Experience, Skills..) from your old CV.
-    If you dont have old CV then just write few words/sentences. You dont need to write nice sentences, AI will take care of that.""")
-    st.markdown("Step 3. Download the generated Word file with the content.")
-    st.markdown("Step 4. After downloading  the word file, edit it based on your requirements.")
+    st.markdown("**Step 1.** Enter job requirements in the box below.")
+    st.markdown("""**Step 2.** Copy and Paste texts for different sections (Experience, Skills..) from your old CV.
+    If you dont have old CV then just write few words/sentences. You dont need to write nice sentences, AI will take care of that. 
+    Default values are given inside text boxes are just for reference. You can delete those and write (copy paste) your own in any format. """)
+    st.markdown("**Step 3.** Download the generated Word file with the content.")
+    st.markdown("**Step 4.** After downloading  the word file, edit it based on your requirements.")
 
 
-    # Function to create a styled label with a specific color
-    def styled_label(text, color):
-        return f"<span style='color:{color}; font-weight:bold;'>{text}</span>"
+    # # Function to create a styled label with a specific color
+    # def styled_label(text, color):
+    #     return f"<span style='color:{color}; font-weight:bold;'>{text}</span>"
     
-    #  unsafe_allow_html=True
-
+    # unsafe_allow_html=True
+    st.markdown("---")
     # st.markdown(":blue[Enter Job Requirements]")
-    job_requirements = st.text_area(":blue[Enter Job Requirements]", height=100)
+    job_requirements = st.text_area(":blue[**Enter Job Requirements**]", value=job_req_default ,height=150)
+    st.markdown("---")
     
     # Copy and paste Experience from your existing CV
     # st.markdown('<h6 style="color:red;">Write or Copy and Paste your Experience Section from your old cv here</h6>', unsafe_allow_html=True)
-    experience_past = st.text_area(':blue[Write or Copy and Paste your Experience Section from your old cv here]', height=150)
+    experience_past = st.text_area(':blue[**Write or Copy and Paste your Experience Section from your old cv here**]',value=experience_default, height=150)
+    st.markdown("---")
     # Number of words for Experience
-    exp_nos_words = st.slider(":orange[Experience: Pick max number of words]", 0, 500,220)
+    exp_nos_words = st.sidebar.slider(":black[**Experience**: Pick max number of tokens/words]", 0, 500,220)
 
     # Copy and paste Skills from your existing CV
-    skills_past = st.text_area(''':blue[Write or Copy and Paste your Skills Section from your old cv here]''', height=150)
+    skills_past = st.text_area(''':blue[**Write or Copy and Paste your Skills Section from your old cv here**]''', value=skill_default,height=150)
     # Number of words for Skills
-    skills_nos_words = st.slider(":orange[Skills: Pick max number of words]", 0, 500,200)
+    skills_nos_words = st.sidebar.slider(":black[**Skills**: Pick max number of tokens/words for description of each skill]", 0, 500,200)
+    st.markdown("---")
 
     # Copy and paste education from your existing CV
-    edu_past = st.text_area(''':blue[Write or Copy and Paste your Education Section from your old cv here]''', height=150)
-    # Number of words for education
-    edu_nos_words = st.slider(":orange[Education: Pick max number of words]", 0, 500,75)
+    edu_past = st.text_area(''':blue[**Write or Copy and Paste your Education Section from your old cv here**]''',value=edu_default ,height=150)
+    # # Number of words for education
+    edu_nos_words = 75 #st.sidebar.slider(":black[**Education**: Pick max number of tokens/words]", 0, 500,75)
+    st.markdown("---")
 
     # Copy and paste Projects from your existing CV
-    projects_past = st.text_area(''':blue[Write or Copy and Paste your Projects Section from your old cv here]''', height=150)
+    projects_past = st.text_area(''':blue[**Write or Copy and Paste your Projects Section from your old cv here**]''',value=project_default ,height=150)
     # Number of words for Skills
-    projects_nos_words = st.slider(":orange[Projects: Pick max number of words]", 0, 500,150)
+    projects_nos_words = st.sidebar.slider(":black[**Projects**: Pick max number of tokens/words]", 0, 500,150)
+    st.markdown("---")
 
     # Copy and paste Achievements/Awards from your existing CV
-    awards_past = st.text_area(''':blue[Write or Copy and Paste your Awards Section from your old cv here]''', height=150)
+    awards_past = st.text_area(''':blue[**Write or Copy and Paste your Awards Section from your old cv here**]''',value=awards_default, height=150)
     # Number of words for Skills
-    awards_nos_words = st.slider(":orange[Awards: Pick max number of words]", 0, 500,150)
+    awards_nos_words = st.sidebar.slider(":black[**Awards**: Pick max number of tokens/words]", 0, 500,150)
+    st.markdown("---")
 
     # Initialize button state
-    submit_clicked = st.button("Submit All")
+    submit_clicked = st.button("Submit All Sections")
 
     # Also added if clause so that script move beyond it only if all submit buttons are clicked. on click Submit button returns 1 else 0.
     if submit_clicked:
@@ -94,7 +135,7 @@ if __name__=="__main__":
         )
     
     else:
-        st.warning("Please click all submit buttons before proceeding.")
+        st.warning("Please click Submit All button before proceeding.")
 
 
 # Note:
