@@ -110,7 +110,7 @@ def create_ms_word_doc():
                 for line in v:
                     doc.document.add_paragraph(line,style='List Bullet')
             
-        # doc.document.add_paragraph()    # to add empty line
+    doc.document.add_paragraph()    # to add empty line
     # doc.document.add_page_break() # Add Page break after experience
 
         # -------------------------
