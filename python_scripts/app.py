@@ -74,30 +74,30 @@ if __name__=="__main__":
     experience_past = st.text_area(':blue[**Write or Copy and Paste your Experience Section from your old cv here**]',value=experience_default, height=150)
     st.markdown("---")
     # Number of words for Experience
-    exp_nos_words = st.sidebar.slider(":black[**Experience**: Pick max number of tokens/words]", 0, 300,150)
+    exp_nos_words = st.sidebar.slider(":black[**Experience**: Pick max number of tokens/words]", 0, 300,115)
 
     # Copy and paste Skills from your existing CV
     skills_past = st.text_area(''':blue[**Write or Copy and Paste your Skills Section from your old cv here**]''', value=skill_default,height=150)
     # Number of words for Skills
-    skills_nos_words = st.sidebar.slider(":black[**Skills**: Pick max number of tokens/words for description of each skill]", 0, 100,70)
+    skills_nos_words = st.sidebar.slider(":black[**Skills**: Pick max number of tokens/words for description of each skill]", 0, 100,15)
     st.markdown("---")
 
     # Copy and paste education from your existing CV
     edu_past = st.text_area(''':blue[**Write or Copy and Paste your Education Section from your old cv here**]''',value=edu_default ,height=150)
     # # Number of words for education
-    edu_nos_words = 75 #st.sidebar.slider(":black[**Education**: Pick max number of tokens/words]", 0, 500,75)
+    edu_nos_words = 50 #st.sidebar.slider(":black[**Education**: Pick max number of tokens/words]", 0, 500,75)
     st.markdown("---")
 
     # Copy and paste Projects from your existing CV
     projects_past = st.text_area(''':blue[**Write or Copy and Paste your Projects Section from your old cv here**]''',value=project_default ,height=150)
     # Number of words for Skills
-    projects_nos_words = st.sidebar.slider(":black[**Projects**: Pick max number of tokens/words]", 0, 200,150)
+    projects_nos_words = st.sidebar.slider(":black[**Projects**: Pick max number of tokens/words]", 0, 150,25)
     st.markdown("---")
 
     # Copy and paste Achievements/Awards from your existing CV
     awards_past = st.text_area(''':blue[**Write or Copy and Paste your Awards Section from your old cv here**]''',value=awards_default, height=150)
     # Number of words for Skills
-    awards_nos_words = st.sidebar.slider(":black[**Awards**: Pick max number of tokens/words]", 0, 100,50)
+    awards_nos_words = st.sidebar.slider(":black[**Awards**: Pick max number of tokens/words]", 0, 100,25)
     st.markdown("---")
 
     # Initialize button state

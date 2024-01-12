@@ -1,7 +1,6 @@
 Projects:
-    Project 1: Designed and implemented a data ingestion, transformation, and egress
-        framework for optimizing campaign performance, leveraging data warehousing
-        best practices and building data pipelines with Azure Data Factory.
-    Project 2: Developed a text summarization application with REST API for data push
-        and pull, utilizing DevSecOps tools and methodologies like CI/CD with GitHub,
-        and Azure DevOps for seamless integration and deployment.
+    Project 1: Designed and implemented data ingestion and transformation framework
+        for sales analytics.
+    Project 2: Developed a data warehousing solution for efficient data management
+        and architecture.
+    Project 3: Built REST/SOAP APIs for seamless data exchange between multiple platforms.
