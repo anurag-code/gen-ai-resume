@@ -35,6 +35,39 @@ class FormatMSword():
         return heading_added
 
 
+def add_table(doc,nrows,ncolumns,keys_list,section_dict,ignored_col='description'):
+    # Add a table with two columns
+    table = doc.document.add_table(rows=nrows, cols=ncolumns)
+    table.style = 'TableGrid'
+    table.columns.autofit = False
+
+    # Set column widths
+    for i in range(ncolumns):
+        table.columns[i].width = Pt(100)
+
+    # Add header row
+    header_row = table.rows[0].cells 
+    c=0
+    for key in keys_list:
+        if ignored_col not in key.lower():
+            header_row[c].text = key
+        c=c+1
+
+    # Make the table header bold
+    for cell in header_row:
+        cell.paragraphs[0].runs[0].bold = True
+
+    # Add data to table
+    row_cells = table.add_row().cells
+
+    # part_key=list(section_dict.keys())-list[ignored_col]
+   
+    counter=0
+    for i in keys_list:
+        row_cells[counter].text = section_dict[i.lower()]
+        counter=counter+1 
+
+
 # Caching resource in order to reuse the word file generated at the end;
 # so that there is no change in job requirement on re-running.
 # @st.cache_resource
@@ -67,31 +100,46 @@ def create_ms_word_doc():
     doc.heading('EXPERIENCE', level=1, bold=True, color=level_1_heading_color)
     # Iterate through experience details
     for exp in exp_details[list(exp_details.keys())[0]]:
+        # --------------To add table to Experience----------------
+        add_table(doc,1,4,['Employer','Title','Location','Dates'],exp,ignored_col='description')
+        
         for k,v in exp.items():
-
-            if k.lower().strip() == 'employer':
-                key = doc.heading((k.upper()), level=3,color=(0, 32, 96))
-
-                if isinstance(v,list):
-                    for line in v:
-                        doc.document.add_paragraph(line,style='List Bullet')
-                else:
-                    run= key.add_run(f'     {v}')
-                    run.bold = True
-                    run.font.color.rgb = RGBColor(0, 0, 0)
-            else:
+            
+            if isinstance(v,list):
                 key = doc.heading((k.upper()), level=3, color=(0, 32, 96))
-
-                if isinstance(v,list):
-                    for line in v:
-                        doc.document.add_paragraph(line,style='List Bullet')
-                else:
-                    run= key.add_run(f'     {v}')
-                    run.bold = False
-                    run.font.color.rgb = RGBColor(0, 0, 0)
-                
-        doc.document.add_paragraph()   # to add empty line
+                for line in v:
+                    doc.document.add_paragraph(line,style='List Bullet')
+            
+        # doc.document.add_paragraph()    # to add empty line
     # doc.document.add_page_break() # Add Page break after experience
+
+        # -------------------------
+
+    #     for k,v in exp.items():
+
+    #         if k.lower().strip() == 'employer':
+    #             key = doc.heading((k.upper()), level=3,color=(0, 32, 96))
+
+    #             if isinstance(v,list):
+    #                 for line in v:
+    #                     doc.document.add_paragraph(line,style='List Bullet')
+    #             else:
+    #                 run= key.add_run(f'     {v}')
+    #                 run.bold = True
+    #                 run.font.color.rgb = RGBColor(0, 0, 0)
+    #         else:
+    #             key = doc.heading((k.upper()), level=3, color=(0, 32, 96))
+
+    #             if isinstance(v,list):
+    #                 for line in v:
+    #                     doc.document.add_paragraph(line,style='List Bullet')
+    #             else:
+    #                 run= key.add_run(f'     {v}')
+    #                 run.bold = False
+    #                 run.font.color.rgb = RGBColor(0, 0, 0)
+                
+    #     doc.document.add_paragraph()   # to add empty line
+    # # doc.document.add_page_break() # Add Page break after experience
 
 
     # Skill section
@@ -125,7 +173,6 @@ def create_ms_word_doc():
         skill_name_cell = row_cells[0].paragraphs[0].add_run(skill[skill_key[0]])
         skill_name_cell.bold = True
         row_cells[1].text = skill[skill_key[1]]
-    # doc.document.add_paragraph()   # to add empty line after the section
 
 
     # Projects section

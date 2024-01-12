@@ -22,15 +22,18 @@ def resume_part_prompt(job_reqmnt,section,words=200,specific_instructions=''):
 
 def prompt_employment(job_reqmnt,exp_old,words=225):
 
-    prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Experience section of a Resume. It should be done 
-    in step by step. First step is to read the Job requirement given below. Second step is to read the existing content 
-    about Experience section from old Resume. Third Step, enhance the Experience section from old Resume based on the job requirements.
-    Description of Experience should also include some impact with some quantification.
-    Final output should be in Json format.
-   
-    Ensure that the length of the total output is less than {words} words.
+    prompt = f"""As a Resume Expert, showcase your creativity in crafting the Experience section of a Resume. Follow these steps to tailor the content:
 
-    Required Keys and value types for Json output for the Experience section of the resume are given below. Candidate may have experience in more than one companies.:
+    1. Begin by thoroughly reviewing the provided Job Requirements below.
+    2. Next, analyze the existing content related to the Experience section from an old Resume.
+    3. In the third step, enhance the Experience section based on the identified job requirements. Include impactful details with quantification wherever possible.
+
+    The final output should be presented in Json format, adhering to the specified structure outlined below. 
+    
+    Note that the description list for each employer should have an exact word count of {words} words. 
+    Be precise and focused in your response, as exceeding or falling short of the {words}-word requirement may lead to a deduction of points.
+
+    Required Keys and Value Types for Json output in the Experience section:
     
     Experience:
         employer: text
@@ -72,7 +75,12 @@ def prompt_skill(job_reqmnt,skill_old,words=200):
         ['skill_Name': text,'skill_Description': text]
     
 
-    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. Ensure that the length of the total output is less than {words} words.
+    Please note that Each Skill in the list should have skill name and skill description for each skill in the list. Atleast 6 key skills should be there. 
+    
+    Compose a response such that each skill_Description for each skill_Name is exactly {words} words. 
+    Ensure your answer is concise and focused, and count the words in your response to meet the specified limit. 
+    Exceeding or falling short of the {words}-word requirement may result in a deduction of points.
+
     Skill section should not mention about professional degree.
 
     {job_reqmnt}
@@ -116,7 +124,7 @@ def prompt_education(job_reqmnt,education_old,words=75):
     return prompt
 
 
-def prompt_projects(job_reqmnt,project_old,words=100):
+def prompt_projects(job_reqmnt,project_old,words=50):
 
     prompt = f"""Please fill in the required information creatively as a Resume Expert, for an Projects section of a Resume. This work should be done 
     in step by step manner. First step is to read the Job requirement given below. Second step is to read the existing content 
@@ -128,9 +136,11 @@ def prompt_projects(job_reqmnt,project_old,words=100):
     Projects:
         'Project 1': text
         'Project 2': text
-        'Project 3': text
+        'Project 3': text 
     
-    Project description should be limited to one or two lines only.  Ensure that the length of the total output is less than {words} words.
+    Compose a response such that response size for the value of each key in the json is exactly {words} words. 
+    Ensure your answer is concise and focused, and count the words in your response to meet the specified limit. 
+    Exceeding or falling short of the {words}-word requirement may result in a deduction of points.
 
 
     {job_reqmnt}
@@ -158,7 +168,10 @@ def prompt_awards(job_reqmnt,awards_old,words=100):
         'Award 2': text
     
     Each Award description should be limited to one line or less only. 
-    Ensure that the length of the total output is less than {words} words.
+    
+    Compose a response such that the total response size is exactly {words} words. 
+    Ensure your answer is concise and focused, and count the words in your response to meet the specified limit. 
+    Exceeding or falling short of the {words}-word requirement may result in a deduction of points.
 
 
     {job_reqmnt}
@@ -218,7 +231,7 @@ def create_content_yaml(exp_old,exp_words,skills_old,skills_words,education_old,
         {"role": "user", "content": experience_prompt}
         ],
         response_format={ "type": "json_object" },
-        max_tokens=1000,
+        max_tokens=500,
         temperature=0.3
     )
 

@@ -1,18 +1,20 @@
 Skills:
 -   skill_Name: Data Engineering
     skill_Description: Hands-on expertise in building data ingestion, transformation,
-        and egress framework
--   skill_Name: Data Warehousing
-    skill_Description: Knowledge of best practices for data warehousing, data management,
-        and architecture
+        and egress framework. Knowledge of best practices for data warehousing and
+        architecture.
+-   skill_Name: Data Pipelines
+    skill_Description: Significant experience in developing technical designs, data
+        profiling, cataloguing, and mapping exercises for data pipelines.
 -   skill_Name: API Development
-    skill_Description: Experience in designing and building APIs (REST/SOAP) for data
-        integration
+    skill_Description: Design and build of APIs (REST/SOAP) to push and pull data
+        from various data systems and platforms.
 -   skill_Name: DevSecOps
-    skill_Description: Familiarity with DevSecOps tools and methodologies such as
-        CI/CD with GitHub, and Azure DevOps
+    skill_Description: Familiarity with DevSecOps tools, CI/CD methodologies with
+        GitHub, and Azure DevOps for secure and efficient data operations.
 -   skill_Name: Azure Data Platform
-    skill_Description: Good knowledge of Azure Data platform and cloud data technologies
+    skill_Description: Good knowledge of Azure Data platform (Azure Synapse, Data
+        Factory, Data Bricks, Data Lake, Power BI) and cloud data technologies.
 -   skill_Name: SQL
-    skill_Description: Strong background with the capability to write performant queries
-        and troubleshoot performance
+    skill_Description: Strong SQL background with the capability to write performant
+        queries and troubleshoot performance issues.
