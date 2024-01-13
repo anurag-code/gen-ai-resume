@@ -30,7 +30,7 @@ def prompt_employment(job_reqmnt,exp_old,words=225):
 
     The final output should be presented in Json format, adhering to the specified structure outlined below. 
     
-    Note that the description list for each employer should have an exact word count of {words} words. 
+    Note that the description section (value of description key in json output) for each employer should have an exact word count of {words} words.
     Be precise and focused in your response, as exceeding or falling short of the {words}-word requirement may lead to a deduction of points.
 
     Required Keys and Value Types for Json output in the Experience section:
@@ -109,7 +109,7 @@ def prompt_education(job_reqmnt,education_old,words=75):
         'Year': Numeric
 
     
-    Please note that Education should only include only the name of last University attended, degree name , and the year in which it was attended.
+    Please note that Education should only include only the name of University attended, degree name , and the year in which it was attended.
     Certifications or other coursework should NOT be mentioned here. Ensure that the length of the total output is less than {words} words.
 
 

@@ -2,35 +2,39 @@ Experience:
 -   employer: ABC Company
     title: Lead Engineer
     location: New York
-    dates: June 2018- Till Now
+    dates: June 2018 - Till Now
     description:
-    - Led a team of data engineers in building a robust data ingestion, transformation,
-        and egress framework, resulting in a 30% improvement in data processing efficiency
-    - Designed and implemented data pipelines using best practices for data warehousing,
-        resulting in a 40% reduction in data processing time
-    - Developed technical designs for data profiling, cataloguing, and mapping exercises,
-        ensuring accurate and efficient data management
-    - Built REST APIs to push and pull data from various data systems, enabling seamless
-        data integration and accessibility
-    - Utilized DevSecOps tools and methodologies for continuous integration and continuous
-        deployment, ensuring secure and efficient data operations
+    - Led the creation of a data pipeline to ingest and store 500TB of raw data weekly
+        using Apache NiFi, Kafka, Elasticsearch, Redis, Python, and Go, resulting
+        in improved data processing efficiency and scalability.
+    - Developed an analytics platform for 20+ stock exchanges with real-time dashboards
+        in ReactJS/Redux, showcasing trade volume by currency pair, user activity,
+        and other vital metrics, leading to enhanced decision-making capabilities
+        for stakeholders.
+    - Executed anomaly detection algorithms across 30+ FX platforms based on historical
+        data from API and the web, contributing to the identification of distinctive
+        trading patterns and improved risk management strategies.
+    - Designed a multi-user, multi-database application for 10+ clients, handling
+        a data processing requirement of 1M records, resulting in streamlined data
+        management and enhanced user experience.
 -   employer: XYZ Pty Ltd
     title: Developer
     location: Chicago
-    dates: "June 2017 \u2013 June 2018"
+    dates: June 2017 - June 2018
     description:
-    - Contributed to the design and build of data pipelines and frameworks, enhancing
-        data processing capabilities
-    - Developed and maintained APIs (REST/SOAP) for efficient data exchange between
-        different platforms
-    - Collaborated with the team to troubleshoot performance issues and optimize SQL
-        queries for improved data processing
+    - Devised a methodology enabling 200+ clients to prioritize vital analytics requirements
+        and convert them into actionable tasks within a 3-day deadline, improving
+        client satisfaction and project turnaround time.
+    - Overhauled the ERP system at Polyhire to support high-volume analytics, leading
+        to a 59% YoY increase in monthly revenues.
+    - Constructed consumer sentiment using multivariate statistical techniques, SEOs,
+        and stock market indexes, resulting in a 70% improvement in Q1 2020 sales
+        forecasting outputs.
+    - Determined optimal business patterns based on data analysis models, redefining
+        business strategy and yielding 95% ROI values beyond industry averages.
 -   employer: QWE Pty Ltd
     title: Consultant
     location: New York
-    dates: "June 2015 \u2013 June 2017"
+    dates: June 2015 - June 2017
     description:
-    - Provided expertise in data management and architecture, contributing to the
-        development of efficient data pipelines
-    - Assisted in the design and implementation of data profiling and cataloguing
-        exercises for accurate data management
+    - To be updated

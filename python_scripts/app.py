@@ -74,7 +74,7 @@ if __name__=="__main__":
     experience_past = st.text_area(':blue[**Write or Copy and Paste your Experience Section from your old cv here**]',value=experience_default, height=150)
     st.markdown("---")
     # Number of words for Experience
-    exp_nos_words = st.sidebar.slider(":black[**Experience**: Pick max number of tokens/words]", 0, 300,115)
+    exp_nos_words = st.sidebar.slider(":black[**Experience**: Pick max number of tokens/words]", 0, 300,95)
 
     # Copy and paste Skills from your existing CV
     skills_past = st.text_area(''':blue[**Write or Copy and Paste your Skills Section from your old cv here**]''', value=skill_default,height=150)

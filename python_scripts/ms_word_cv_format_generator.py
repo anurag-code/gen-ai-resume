@@ -64,7 +64,7 @@ def add_table(doc,nrows,ncolumns,keys_list,section_dict,ignored_col='description
    
     counter=0
     for i in keys_list:
-        row_cells[counter].text = section_dict[i.lower()]
+        row_cells[counter].text = str(section_dict[i.lower()])
         counter=counter+1 
 
 
@@ -103,8 +103,9 @@ def create_ms_word_doc():
         # --------------To add table to Experience----------------
         add_table(doc,1,4,['Employer','Title','Location','Dates'],exp,ignored_col='description')
         
+        # description shd be showed as paragraph.
         for k,v in exp.items():
-            
+            # check for description list
             if isinstance(v,list):
                 key = doc.heading((k.upper()), level=3, color=(0, 32, 96))
                 for line in v:
@@ -112,34 +113,6 @@ def create_ms_word_doc():
             
     doc.document.add_paragraph()    # to add empty line
     # doc.document.add_page_break() # Add Page break after experience
-
-        # -------------------------
-
-    #     for k,v in exp.items():
-
-    #         if k.lower().strip() == 'employer':
-    #             key = doc.heading((k.upper()), level=3,color=(0, 32, 96))
-
-    #             if isinstance(v,list):
-    #                 for line in v:
-    #                     doc.document.add_paragraph(line,style='List Bullet')
-    #             else:
-    #                 run= key.add_run(f'     {v}')
-    #                 run.bold = True
-    #                 run.font.color.rgb = RGBColor(0, 0, 0)
-    #         else:
-    #             key = doc.heading((k.upper()), level=3, color=(0, 32, 96))
-
-    #             if isinstance(v,list):
-    #                 for line in v:
-    #                     doc.document.add_paragraph(line,style='List Bullet')
-    #             else:
-    #                 run= key.add_run(f'     {v}')
-    #                 run.bold = False
-    #                 run.font.color.rgb = RGBColor(0, 0, 0)
-                
-    #     doc.document.add_paragraph()   # to add empty line
-    # # doc.document.add_page_break() # Add Page break after experience
 
 
     # Skill section
@@ -186,18 +159,56 @@ def create_ms_word_doc():
     # Education section
     edu = doc.heading('EDUCATION', level=1,bold=True, color=level_1_heading_color)
     edu.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    for edu in education_details[list(education_details.keys())[0]]:
-        for k,v in edu.items():
-            key = doc.heading((k.upper()), level=3,color=(0, 32, 96))
-            key.alignment = WD_ALIGN_PARAGRAPH.LEFT
-            if isinstance(v,list):
-                for line in v:
-                    doc.document.add_paragraph(v,style='List Bullet')
-            else:
-                run= key.add_run(f'     {v}')
-                run.bold = False
-                run.font.color.rgb = RGBColor(0, 0, 0)
-    # doc.document.add_paragraph()   # to add empty line
+    # Iterate through education details
+    rows=len(education_details[list(education_details.keys())[0]])
+    # for edu in education_details[list(education_details.keys())[0]]:
+    #     # --------------To add table to Education----------------
+    #     add_table(doc,1,3,['Institution Name','Degree Name','Year'],edu)
+        # for k,v in edu.items():
+        #     key = doc.heading((k.upper()), level=3,color=(0, 32, 96))
+        #     key.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        #     if isinstance(v,list):
+        #         for line in v:
+        #             doc.document.add_paragraph(v,style='List Bullet')
+        #     else:
+        #         run= key.add_run(f'     {v}')
+        #         run.bold = False
+        #         run.font.color.rgb = RGBColor(0, 0, 0)
+    # # doc.document.add_paragraph()   # to add empty line
+
+    # Add a table with 3 columns. One row to start. Further we will keep adding as reqd.
+    table = doc.document.add_table(rows=1, cols=3)
+    table.style = 'TableGrid'
+    table.columns.autofit = False
+
+    # Set column widths
+    table.columns[0].width = Pt(100)
+    table.columns[1].width = Pt(100)
+    table.columns[2].width = Pt(100)
+
+    # Add header row
+    header_row = table.rows[0].cells
+    header_row[0].text = 'Institution Name'
+    header_row[1].text = 'Degree Name'
+    header_row[2].text = 'Year'
+
+    # Make the table header bold
+    for cell in header_row:
+        cell.paragraphs[0].runs[0].bold = True
+
+    edu_data_list=education_details[list(education_details.keys())[0]]
+    # Add data to table
+    for edu_dict in edu_data_list:
+        # add rows one by one in loop
+        edu_row_cells = table.add_row().cells
+        # counter=0
+        # # '['Institution Name','Degree Name','Year']' hard coded to maintain sequence as header.
+        # for key in ['Institution Name','Degree Name','Year']:
+        #     row_cells[counter].text = str(edu_dict[key])
+        #     counter=counter+1
+        edu_row_cells[0].text = str(edu_dict['Institution Name'])
+        edu_row_cells[1].text = str(edu_dict['Degree Name'])
+        edu_row_cells[2].text = str(edu_dict['Year'])
 
 
     # Awards section

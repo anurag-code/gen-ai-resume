@@ -1,6 +1,8 @@
 Projects:
-    Project 1: Designed and implemented data ingestion and transformation framework
-        for sales analytics.
-    Project 2: Developed a data warehousing solution for efficient data management
-        and architecture.
-    Project 3: Built REST/SOAP APIs for seamless data exchange between multiple platforms.
+    Project 1: Designed and implemented a data ingestion and transformation framework
+        for real-time data processing, enhancing data quality and reliability.
+    Project 2: Developed a data warehousing solution with optimized data pipelines,
+        leveraging Azure Data Factory and Synapse for efficient data management and
+        architecture.
+    Project 3: Built RESTful APIs for seamless data integration and extraction, ensuring
+        secure and efficient communication between diverse data systems and platforms.
