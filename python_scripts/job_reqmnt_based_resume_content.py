@@ -193,7 +193,7 @@ def create_content_yaml(exp_old,exp_words,skills_old,skills_words,education_old,
     load_dotenv()
 
     # Access environment variables
-    api_key_openai = os.getenv("OPENAI_API_KEY")
+    api_key_openai = st.secrets["OPENAI_API_KEY"] # os.getenv("OPENAI_API_KEY")
 
     # Create an instance for OpenAI
     client = OpenAI(api_key=api_key_openai)

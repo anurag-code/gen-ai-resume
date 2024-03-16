@@ -8,10 +8,15 @@ if __name__=="__main__":
 
     # Display image and title
     col1, col2 = st.columns([1, 5])  # Create columns for layout
+
+    line_style = """
+                <hr style="border: 3px solid black; margin: 10px 0px;">
+                """
     with col1:
         st.image("./images/pic_cv.png", width=100)
     with col2:
         st.title("Resume Assistant")
+    st.write(line_style, unsafe_allow_html=True)
 
     job_req_default='''Job Requirements: 
         Qualifications & Experience:
